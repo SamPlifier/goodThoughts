@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.navContainer {
+    height: 50px;
+    width: 100vw;
+    background: #45c2fb;
+}
+
+.topNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #45c2fb;
+    height: 50px;
+    float: right;
+}
+
+.logoContainer {
+    height: 150px;
+    float: left;
+    margin: 50px 0px 20px 20px;
+}
+
+.logoImg {
+    height: 100%;
+}
+
+a {
+    height: 18px;
+}
+
+.topNav li {
+    float: left;
+    background: #45c2fb;
+}
+
+.topNav li a {
+    display: inline-block;
+    letter-spacing: 1px;
+    color: white;
+    padding: 16px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+    float: left;
+}
+
+.topNav li:hover {
+    background: #555;
+}
+
+.topNav .hamburger {
+    display: none;
+}
+
+@media screen and (max-width:680px) {
+    .bar1, .bar2, .bar3 {
+        width: 26px;
+        height: 2px;
+        background-color: white;
+        transition: all .5s cubic-bezier(.49, 1.35, .56, 1.39);
+    }
+    .bar2 {
+        margin: 5px 0;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-405deg) translate(-5px, 5px);
+        transform: rotate(-405deg) translate(-5px, 5px);
+    }
+    .change .bar2 {
+        opacity: 0;
+        margin: 5px 0;
+    }
+    .change .bar3 {
+        -webkit-transform: rotate(405deg) translate(-5px, -5px);
+        transform: rotate(405deg) translate(-5px, -5px);
+    }
+    .hamburger:hover {
+        cursor: pointer;
+    }
+    .topNav.responsive {
+        float: none;
+        position: absolute;
+        width: 100%;
+        opacity: .97;
+    }
+    .navLink {
+        text-align: center;
+        width: 100%;
+    }
+    li {
+        display: none;
+    }
+    .topNav .hamburger {
+        display: block;
+    }
+    ul.topNav.responsive li:not(.hamburger) {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+    ul.topNav.responsive li.hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
