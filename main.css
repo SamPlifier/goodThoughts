@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background: #99d9ef!important;
+}
+
 h1, h2, h3, h4, h5, h6, span {
     font-family: 'Playfair Display', serif;
 }
@@ -10,15 +14,15 @@ h1, h2, h3, h4, h5, h6, span {
 p, a {
     letter-spacing: 1px;
     font-family: 'Josefin Sans', sans-serif;
-    /*font-size:1.2rem;*/
 }
 
 .navContainer {
+    z-index: 3;
     position: fixed;
     height: 50px;
+    background: white;
     width: 100vw;
-    background-color: #45c2fb;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.26' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    border-radius: 30px 0 0 30px;
 }
 
 .topNav {
@@ -45,7 +49,7 @@ p, a {
     position: absolute;
     top: 18px;
     left: 20px;
-    color: white;
+    color: #4d4d4d;
     height: 50px;
 }
 
@@ -55,19 +59,22 @@ a {
 
 .topNav li {
     float: left;
-    background-color: #45c2fb;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.26' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    transition: all 0.5s ease;
 }
 
 .topNav li a {
     display: inline-block;
+    color: #4d4d4d;
     letter-spacing: 1px;
-    color: white;
     padding: 18px 17px 14px 17px;
     text-decoration: none;
     transition: 0.5s;
     float: left;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.topNav li a:hover {
+    color: #99d9ef;
 }
 
 .topNav li:hover {
@@ -78,11 +85,10 @@ a {
 .topNav .hamburger {
     display: none;
 }
-div#myCarousel.carousel.slide {
-    z-index: -1;
-}
+
 div#myCarousel.carousel.slide div.carousel-inner div.item {
     background: white;
+    margin-top: 30px;
     height: 150px;
 }
 
@@ -91,10 +97,13 @@ div#myCarousel.carousel.slide ol.carousel-indicators {
 }
 
 div#myCarousel.carousel.slide ol.carousel-indicators li {
-    background-color: #45c2fb;
+    background-color: #99d9ef;
+
 }
+
 div#myCarousel.carousel.slide ol.carousel-indicators li.active {
     background-color: #4d4d4d;
+    border: none;
 }
 
 div#myCarousel div.carousel-inner div.item.active div.carousel-caption h5, div#myCarousel div.carousel-inner div.item div.carousel-caption h5 {
@@ -110,6 +119,7 @@ div#myCarousel div.carousel-inner div.item.active div.carousel-caption p, div#my
     color: #4d4d4d;
     text-shadow: none;
     font-size: 1.7rem!important;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width:680px) {
@@ -146,7 +156,7 @@ div#myCarousel div.carousel-inner div.item.active div.carousel-caption p, div#my
     }
     .navLink {
         text-align: center;
-        height:50px;
+        height: 50px;
     }
     .menuLink {
         width: 100%;
@@ -161,7 +171,7 @@ div#myCarousel div.carousel-inner div.item.active div.carousel-caption p, div#my
     .topNav .hamburger {
         display: block;
         background: #4d4d4d;
-        height:50px;
+        height: 50px;
     }
     ul.topNav.responsive li:not(.hamburger) {
         clear: both;
@@ -169,6 +179,10 @@ div#myCarousel div.carousel-inner div.item.active div.carousel-caption p, div#my
         justify-content: center;
         position: relative;
         width: 100%;
+        background: white;
+    }
+    ul.topNav.responsive li:not(.hamburger):hover {
+        background:#4d4d4d;
     }
     ul.topNav.responsive li.hamburger {
         display: flex;
