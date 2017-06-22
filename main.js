@@ -1,6 +1,5 @@
-const hamburger = document.getElementsByClassName('hamburger')[0];
+const navLink = document.getElementsByClassName('topNav')[0];
 const nav = document.getElementById('myTopNav');
-
 function addRespClass() {
     if (nav.className === 'topNav') {
         nav.className += ' responsive';
@@ -14,4 +13,7 @@ function addRespClass() {
         }, 450)
     }
 }
-hamburger.addEventListener('click', addRespClass, false);
+function logStuff() {
+    console.log('clicked');
+}
+navLink.addEventListener('click', addRespClass, false);

@@ -2,15 +2,18 @@
     margin: 0;
     padding: 0;
 }
+
 h1, h2, h3, h4, h5, h6, span {
     font-family: 'Playfair Display', serif;
 }
- p, a {
-     letter-spacing:1px;
-     font-family: 'Josefin Sans', sans-serif;
+
+p, a {
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans', sans-serif;
 }
+
 .navContainer {
-    position:fixed;
+    position: fixed;
     height: 50px;
     width: 100vw;
     background-color: #45c2fb;
@@ -27,9 +30,13 @@ h1, h2, h3, h4, h5, h6, span {
 }
 
 .logoContainer {
-    width: 300px;
+    width: 385px;
     float: left;
     margin: 50px 0px;
+}
+
+.logoImg {
+    width: 100%;
 }
 
 .headerEmail {
@@ -38,10 +45,6 @@ h1, h2, h3, h4, h5, h6, span {
     top: 16px;
     left: 60px;
     color: white;
-}
-
-.logoImg {
-    width: 100%;
 }
 
 a {
@@ -59,7 +62,7 @@ a {
     display: inline-block;
     letter-spacing: 1px;
     color: white;
-    padding: 16px 16px;
+    padding: 18px 17px 14px 17px;
     text-decoration: none;
     transition: 0.5s;
     float: left;
@@ -87,10 +90,12 @@ div.page {
     background-color: #8bc34a;
     /*background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.26' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");*/
 }
+
 section {
-    clear:both;
+    clear: both;
     margin-bottom: 200px;
 }
+
 div.quote {
     line-height: 1.5rem;
     height: 120px;
@@ -102,12 +107,17 @@ div.quote {
     justify-content: space-around;
     align-items: center;
     font-weight: 600;
+    border-radius: 5px;
 }
+
 .quote.bizDescription {
-    width:90%;
+    width: 90%;
 }
+
+
+
 span {
-    width:100%;
+    width: 100%;
     font-weight: 100;
 }
 
@@ -149,7 +159,6 @@ span {
     }
     .navLink {
         text-align: center;
-        width: 100%;
     }
     li {
         display: none;
