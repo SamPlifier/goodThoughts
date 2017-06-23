@@ -5,8 +5,8 @@ $('a[href^="#"]').on('click', function(event) {
     if (target.length) {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top - 100
-        }, 1000);
+            scrollTop: target.offset().top - 50
+        }, 1500);
     }
 });
 

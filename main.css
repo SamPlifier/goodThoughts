@@ -3,16 +3,10 @@
     padding: 0;
 }
 
-body {
-    background: #99d9ef!important;
-}
 
-h1, h2, h3, h4, h5, h6, span {
-    font-family: 'Playfair Display', serif;
-}
+/*font-family: 'Playfair Display', serif;*/
 
-p, a {
-    letter-spacing: 1px;
+a {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -22,7 +16,8 @@ p, a {
     height: 50px;
     background: white;
     width: 100vw;
-    border-radius: 30px 0 0 30px;
+    /*border-radius: 30px 0 0 30px;*/
+    box-shadow: #4d4d4d 2px 2px 5px;
 }
 
 .topNav {
@@ -37,7 +32,7 @@ p, a {
 .logoContainer {
     width: 240px;
     float: left;
-    margin: 50px 0px 0px 14px;
+    margin: 20px 0px 0px 14px;
 }
 
 .logoImg {
@@ -86,6 +81,11 @@ a {
     display: none;
 }
 
+div#myCarousel.carousel.slide {
+    background: #99d9ef;
+    z-index: -1;
+}
+
 div#myCarousel.carousel.slide div.carousel-inner div.item {
     background: white;
     margin-top: 30px;
@@ -98,7 +98,6 @@ div#myCarousel.carousel.slide ol.carousel-indicators {
 
 div#myCarousel.carousel.slide ol.carousel-indicators li {
     background-color: #99d9ef;
-
 }
 
 div#myCarousel.carousel.slide ol.carousel-indicators li.active {
@@ -108,7 +107,7 @@ div#myCarousel.carousel.slide ol.carousel-indicators li.active {
 
 div#myCarousel div.carousel-inner div.item.active div.carousel-caption h5, div#myCarousel div.carousel-inner div.item div.carousel-caption h5 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.8rem!important;
+    font-size: 1.7rem!important;
     text-shadow: none;
     color: #4d4d4d;
 }
@@ -118,8 +117,22 @@ div#myCarousel div.carousel-inner div.item.active div.carousel-caption p, div#my
     margin: 0;
     color: #4d4d4d;
     text-shadow: none;
-    font-size: 1.7rem!important;
+    font-size: 2rem!important;
     margin-bottom: 10px;
+}
+
+#reformEfforts .container p, #reformEfforts .container p a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem!important;
+    color:#4d4d4d;
+}
+#reformEfforts .container a.paragraphLink {
+    text-decoration: underline!important;
+}
+#reformEfforts .container h5 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.3rem!important;
 }
 
 @media screen and (max-width:680px) {
@@ -182,11 +195,14 @@ div#myCarousel div.carousel-inner div.item.active div.carousel-caption p, div#my
         background: white;
     }
     ul.topNav.responsive li:not(.hamburger):hover {
-        background:#4d4d4d;
+        background: #4d4d4d;
     }
     ul.topNav.responsive li.hamburger {
         display: flex;
         width: 100%;
         justify-content: flex-end;
+    }
+    ul.topNav.responsive li:last-child {
+        box-shadow: #4d4d4d 0px 7px 10px;
     }
 }
