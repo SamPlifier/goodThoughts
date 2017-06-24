@@ -16,14 +16,12 @@ a {
 }
 
 .email {
-    width:100%;
-    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    position:fixed;
-    margin-right:50%;
-    margin-top: 10px;
-    font-size:2rem;
+    float: right;
+    margin: 10px 70px;
+    font-size: 2rem;
 }
+
 .navContainer {
     z-index: 3;
     position: fixed;
@@ -34,30 +32,37 @@ a {
     top: 0;
     box-shadow: #4d4d4d 2px 2px 5px;
 }
+
 .bar1, .bar2, .bar3 {
     width: 26px;
     height: 2px;
     background-color: white;
     transition: all .5s cubic-bezier(.49, 1.35, .56, 1.39);
 }
+
 .bar2 {
     margin: 5px 0;
 }
+
 .change .bar1 {
     -webkit-transform: rotate(-405deg) translate(-5px, 5px);
     transform: rotate(-405deg) translate(-5px, 5px);
 }
+
 .change .bar2 {
     opacity: 0;
     margin: 5px 0;
 }
+
 .change .bar3 {
     -webkit-transform: rotate(405deg) translate(-5px, -5px);
     transform: rotate(405deg) translate(-5px, -5px);
 }
+
 .hamburger:hover {
     cursor: pointer;
 }
+
 .topNav.responsive {
     float: none;
     position: absolute;
@@ -65,25 +70,33 @@ a {
     opacity: .97;
     z-index: 3;
 }
+
 .navLink {
     text-align: center;
     height: 50px;
 }
+
 .menuLink {
     width: 100%;
 }
+
+
 /* A menuLink is the link to a page, navLink is menuLink items + the hamburger menu */
+
 .navLink:hover {
     cursor: pointer;
 }
+
 li {
     display: none;
 }
+
 .topNav .hamburger {
     display: block;
     background: #4d4d4d;
     height: 50px;
 }
+
 ul.topNav.responsive li:not(.hamburger) {
     clear: both;
     display: flex;
@@ -92,17 +105,21 @@ ul.topNav.responsive li:not(.hamburger) {
     width: 100%;
     background: white;
 }
+
 ul.topNav.responsive li:not(.hamburger):hover {
     background: #4d4d4d;
 }
+
 ul.topNav.responsive li.hamburger {
     display: flex;
     width: 100%;
     justify-content: flex-end;
 }
+
 ul.topNav.responsive li:last-child {
     box-shadow: #4d4d4d 0px 7px 10px;
 }
+
 .container {
     background: white;
     margin: 100px 0px;
@@ -119,10 +136,10 @@ ul.topNav.responsive li:last-child {
 }
 
 .logoContainer {
-    display:flex;
-    justify-content: center;
-    height:250px;
-    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    height: 250px;
+    margin: 40px 0 0 20px;
 }
 
 .logoImg {
@@ -167,7 +184,6 @@ a {
     transition: all 0.5s ease-in-out;
 }
 
-
 .quoteFade {
     clear: both;
     background: white;
@@ -179,19 +195,33 @@ a {
     margin: 30px 0 0 0;
 }
 
+.businessType {
+    text-align: center;
+    margin-top: 0;
+    padding: 20px;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    color: white;
+    background: #925700;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .quotes {
     display: none;
     text-align: center;
     color: #4d4d4d;
 }
+
 .quotes h3 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem!important;
 }
+
 .quotes p {
     font-family: 'Playfair Display', serif;
     font-size: 1.7rem!important;
 }
+
 section .container p, section .container p a {
     font-family: 'Playfair Display', serif;
     font-size: 1.7rem!important;
@@ -213,7 +243,6 @@ iframe {
 }
 
 @media screen and (max-width:680px) {
-
     .video-wrapper {
         padding: 10px;
     }
