@@ -7,10 +7,23 @@ body {
     background: #99d9ef!important;
 }
 
+body::-webkit-scrollbar {
+    display: none
+}
+
 a {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.email {
+    width:100%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    position:fixed;
+    margin-right:50%;
+    margin-top: 10px;
+    font-size:2rem;
+}
 .navContainer {
     z-index: 3;
     position: fixed;
@@ -21,7 +34,75 @@ a {
     top: 0;
     box-shadow: #4d4d4d 2px 2px 5px;
 }
-
+.bar1, .bar2, .bar3 {
+    width: 26px;
+    height: 2px;
+    background-color: white;
+    transition: all .5s cubic-bezier(.49, 1.35, .56, 1.39);
+}
+.bar2 {
+    margin: 5px 0;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-405deg) translate(-5px, 5px);
+    transform: rotate(-405deg) translate(-5px, 5px);
+}
+.change .bar2 {
+    opacity: 0;
+    margin: 5px 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(405deg) translate(-5px, -5px);
+    transform: rotate(405deg) translate(-5px, -5px);
+}
+.hamburger:hover {
+    cursor: pointer;
+}
+.topNav.responsive {
+    float: none;
+    position: absolute;
+    width: 100%;
+    opacity: .97;
+    z-index: 3;
+}
+.navLink {
+    text-align: center;
+    height: 50px;
+}
+.menuLink {
+    width: 100%;
+}
+/* A menuLink is the link to a page, navLink is menuLink items + the hamburger menu */
+.navLink:hover {
+    cursor: pointer;
+}
+li {
+    display: none;
+}
+.topNav .hamburger {
+    display: block;
+    background: #4d4d4d;
+    height: 50px;
+}
+ul.topNav.responsive li:not(.hamburger) {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background: white;
+}
+ul.topNav.responsive li:not(.hamburger):hover {
+    background: #4d4d4d;
+}
+ul.topNav.responsive li.hamburger {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+ul.topNav.responsive li:last-child {
+    box-shadow: #4d4d4d 0px 7px 10px;
+}
 .container {
     background: white;
     margin: 100px 0px;
@@ -38,12 +119,14 @@ a {
 }
 
 .logoContainer {
-    width: 240px;
-    margin: 20px 0px 0px 14px;
+    display:flex;
+    justify-content: center;
+    height:250px;
+    margin-top: 40px;
 }
 
 .logoImg {
-    width: 100%;
+    width: 300px;
 }
 
 .headerEmail {
@@ -84,9 +167,6 @@ a {
     transition: all 0.5s ease-in-out;
 }
 
-.topNav .hamburger {
-    display: none;
-}
 
 .quoteFade {
     clear: both;
@@ -104,18 +184,25 @@ a {
     text-align: center;
     color: #4d4d4d;
 }
-
-#reformEfforts .container p, #reformEfforts .container p a {
+.quotes h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem!important;
+}
+.quotes p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem!important;
+}
+section .container p, section .container p a {
     font-family: 'Playfair Display', serif;
     font-size: 1.7rem!important;
     color: #4d4d4d;
 }
 
-#reformEfforts .container a.paragraphLink {
+section .container a.paragraphLink {
     text-decoration: underline!important;
 }
 
-#reformEfforts .container h5 {
+section .container h5 {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem!important;
@@ -126,75 +213,7 @@ iframe {
 }
 
 @media screen and (max-width:680px) {
-    .bar1, .bar2, .bar3 {
-        width: 26px;
-        height: 2px;
-        background-color: white;
-        transition: all .5s cubic-bezier(.49, 1.35, .56, 1.39);
-    }
-    .bar2 {
-        margin: 5px 0;
-    }
-    .change .bar1 {
-        -webkit-transform: rotate(-405deg) translate(-5px, 5px);
-        transform: rotate(-405deg) translate(-5px, 5px);
-    }
-    .change .bar2 {
-        opacity: 0;
-        margin: 5px 0;
-    }
-    .change .bar3 {
-        -webkit-transform: rotate(405deg) translate(-5px, -5px);
-        transform: rotate(405deg) translate(-5px, -5px);
-    }
-    .hamburger:hover {
-        cursor: pointer;
-    }
-    .topNav.responsive {
-        float: none;
-        position: absolute;
-        width: 100%;
-        opacity: .97;
-        z-index: 3;
-    }
-    .navLink {
-        text-align: center;
-        height: 50px;
-    }
-    .menuLink {
-        width: 100%;
-    }
-    /* A menuLink is the link to a page, navLink is menuLink items + the hamburger menu */
-    .navLink:hover {
-        cursor: pointer;
-    }
-    li {
-        display: none;
-    }
-    .topNav .hamburger {
-        display: block;
-        background: #4d4d4d;
-        height: 50px;
-    }
-    ul.topNav.responsive li:not(.hamburger) {
-        clear: both;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        background: white;
-    }
-    ul.topNav.responsive li:not(.hamburger):hover {
-        background: #4d4d4d;
-    }
-    ul.topNav.responsive li.hamburger {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-    }
-    ul.topNav.responsive li:last-child {
-        box-shadow: #4d4d4d 0px 7px 10px;
-    }
+
     .video-wrapper {
         padding: 10px;
     }
