@@ -6,7 +6,7 @@ topMenu.on('click', function(event) {
     if (target.length) {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top - 100
+            scrollTop: target.offset().top - 75
         }, 1000);
     }
 });
